@@ -1,7 +1,7 @@
 # <b>SUN BREAKER</b>
 ## <b> Démarrage rapide </b>
 ### <b> Description </b>
-Color printer est un module permettant de faire de chiffrer des chaîne de caractère vers du décimal sans qu’à partite de la sortie, l’entré puise être retrouvé
+Sun breaker est un module permettant de faire de chiffrer des chaîne de caractère vers du décimal sans qu’à partite de la sortie, l’entré puise être retrouvé
 ### <b> Installation </b>
 Téléchargez le repository, et placé sunbreaker.py dans le dossier de votre programme.
 
