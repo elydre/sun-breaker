@@ -1,9 +1,9 @@
 # <b>SUN BREAKER</b>
 ## <b> Démarrage rapide </b>
 ### <b> Description </b>
-Sun breaker est un module permettant de faire de chiffrer des chaîne de caractère vers du décimal sans qu’à partite de la sortie, l’entrée puise être retrouvé
+Sun breaker est un module permettant de chiffrer des chaînes de caractères vers du décimal sans qu’avec la sortie, l’entrée puise être retrouvée.
 ### <b> Installation </b>
-Téléchargez le repository, et placé sunbreaker.py dans le dossier de votre programme.
+Téléchargez le repository, et déplacez sunbreaker.py dans le dossier de votre programme.
 
 ### <b> Utilisation </b>
 exemple 1:
