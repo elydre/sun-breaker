@@ -64,7 +64,7 @@ et oui...
 
 Pour trouvé ses cas particulier 2 programme on été codé, brut-force/double/double.py (qui utilisé les data basse classique) et brut-force/double/double.cpp (avec des data base «simple» que vous trouverais dans brut-force/double/simple-data)
 
-Voila les sortie que l’on peut avoir:
+Voila les sorties que l’on peut avoir:
 
 ```
 nombre d'apparition
