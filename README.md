@@ -62,7 +62,7 @@ Le problème de crypté avec perte c’est que certaine des chaîne de caractèr
 
 et oui...
 
-Pour trouvé ses cas particulier 2 programme on été codé, brut-force/double/double.py (qui utilisé les data basse classique) et brut-force/double/double.cpp (avec des data base «simple» que vous trouverais dans brut-force/double/simple-data)
+Pour trouver ses cas particulier 2 programme on été codé, brut-force/double/double.py (qui utilisé les data basse classique) et brut-force/double/double.cpp (avec des data base «simple» que vous trouverais dans brut-force/double/simple-data)
 
 Voila les sorties que l’on peut avoir:
 
