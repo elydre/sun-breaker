@@ -41,6 +41,20 @@ def BtoN(bina):
 def TtoB(text):
     return(''.join(format(ord(i), '08b') for i in text))
 
-def sunbreaker(var):
+def bin_sunbreaker(var):
     var = TtoB(BtoC(TtoB(var)))
-    return(int(BtoN(pert(var,BtoC(var)))))
+    return(pert(var,BtoC(var)))
+
+def sunbreaker(var):
+    return(BtoN(bin_sunbreaker(var)))
+
+if __name__ == "__main__":
+    mode = input("Mode (bin/int): ")
+    if mode == "bin":
+        while True:
+            print(bin_sunbreaker(input("Texte: ")))
+    elif mode == "int":
+        while True:
+            print(sunbreaker(input("Texte: ")))
+    else:
+        print("Mode non reconnu")
