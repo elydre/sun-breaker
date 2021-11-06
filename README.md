@@ -40,7 +40,7 @@ Un petit schéma veau mieux qu’un long discours <i>:kappa:</i>
 
 Rien de mieux pour tester un algorithme que de le mettre a rude épreuve car même si il est impossible (a causse des bits perdus) de retrouver l’entrée avec la sortie, on peut toujours testé toute les entrées avec le break. Pour sa le brut force est la 🤣.
 
-Le programme brut-force/brut-force.py pemet ainsi de tester toutes les possibilité (avec des jeu de caractère différent).
+Le programme brut-force/brut-force.py pemet ainsi de tester toutes les possibilités (avec des jeu de caractère différent).
 
 Mais si plutôt que de devoirs généré toute les combinaison et de les crypté, on les enregistrerais dans un basse de données. brut-force/Mkdata.py le fait pour vous, et brut-force/finder.py permet de retrouvé les break dans les basse de données.
 
