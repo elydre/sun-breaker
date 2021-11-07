@@ -34,6 +34,8 @@ colorprint("var = pert(var) -> ", color = Colors.blanc,end = False)
 for x in range(len(var)):
     passed += 1
 
+    colorprint(f"[{passed}]", color = Colors.green, end = False)
+
     if int(passed) > int(clé[x]):
         colorprint(var[x], color = Colors.red, end = False)
         passed = 0
