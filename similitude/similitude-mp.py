@@ -6,7 +6,9 @@ lvl = 70
 
 #convertie un nombre en binaire
 def bin_convert(n):
-    return bin_convert(n//2) + str(n%2)
+    n = int(n)
+    if n == 0: return "0"
+    else: return bin_convert(n//2) + str(n%2)
 
 entree = f"0{bin_convert(entree)}"
 
