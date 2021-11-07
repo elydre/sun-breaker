@@ -1,9 +1,16 @@
 import mod.sunbreaker as sunbreaker
 from multiprocessing import Pool
 
-entree = "001001010010010100100000100001000010000010000101001001011010010000110000100101001011000010100100101001"
-
+entree = 735733066992415932724787554601
 lvl = 70
+
+#convertie un nombre en binaire
+def bin_convert(n):
+    n = int(n)
+    if n == 0: return "0"
+    else: return bin_convert(n//2) + str(n%2)
+
+entree = f"0{bin_convert(entree)}"
 
 def testeur(p):
     p_breaked = sunbreaker.bin_sunbreaker(p)
@@ -40,7 +47,7 @@ if __name__ == "__main__":
 
         garde = round((len(paire)/len(paire_edit))/len(car)*100,1)
         
-        print(f"test de {len(paire[1])} long, {garde}% gardé, {len(paire)} éléments")
+        print(f"test de {len(paire[0])} long, {garde}% gardé, {len(paire)} éléments")
         
         paire_edit = []
 
