@@ -31,7 +31,7 @@ if __name__ == "__main__":
     car = list("abcdefghijklmnopqrstuvwxyz")
     paire_edit = car
     while True:
-        print("contruction de paire")
+        print("contruction des paires")
         paire = []
         for x in paire_edit:
             if x != None:
@@ -40,13 +40,12 @@ if __name__ == "__main__":
 
         garde = round((len(paire)/len(paire_edit))/len(car)*100,1)
         
-        print(f"{garde}% gardé, {len(paire)}éléments")
+        print(f"test de {len(paire[1])} long, {garde}% gardé, {len(paire)} éléments")
         
         paire_edit = []
 
-        print("calcul en POOL")
+        print("calculs en POOL")
         with Pool(48) as pl:
             paire_edit = (pl.map(testeur, paire))
-        print("verification")
-        if "§find§" in paire_edit:
-            break
+
+        if "§find§" in paire_edit: break
