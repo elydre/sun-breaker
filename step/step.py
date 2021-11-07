@@ -1,55 +1,56 @@
 from mod.sunbreaker import *
 from mod.ColorPrint import colorprint, Colors
 
-var = input("Texte: ")
+while True:
+    var = input("Texte: ")
 
-var = TtoB(var)
+    var = TtoB(var)
 
-colorprint("var = TtoB(var) -> ", color = Colors.blanc,end = False)
-colorprint(var, color = Colors.cyan)
+    colorprint("var = TtoB(var) -> ", color = Colors.blanc,end = False)
+    colorprint(var, color = Colors.cyan)
 
-var = BtoC(var)
+    var = BtoC(var)
 
-colorprint("var = BtoC(var) -> ", color = Colors.blanc,end = False)
-colorprint(var, color = Colors.cyan)
+    colorprint("var = BtoC(var) -> ", color = Colors.blanc,end = False)
+    colorprint(var, color = Colors.cyan)
 
-var = TtoB(var)
+    var = TtoB(var)
 
-old = var
+    old = var
 
-colorprint("var = TtoB(var) -> ", color = Colors.blanc,end = False)
-colorprint(var, color = Colors.cyan)
+    colorprint("var = TtoB(var) -> ", color = Colors.blanc,end = False)
+    colorprint(var, color = Colors.cyan)
 
-clé = BtoC(var)
+    clé = BtoC(var)
 
-colorprint("clé = BtoC(var) -> ", color = Colors.blanc,end = False)
-colorprint(clé, color = Colors.cyan)
+    colorprint("clé = BtoC(var) -> ", color = Colors.blanc,end = False)
+    colorprint(clé, color = Colors.cyan)
 
-sort = ""
-passed = 0
-while len(clé) < len(var): clé += clé
+    sort = ""
+    passed = 0
+    while len(clé) < len(var): clé += clé
 
-colorprint("var = pert(var) -> ", color = Colors.blanc,end = False)
+    colorprint("var = pert(var) -> ", color = Colors.blanc,end = False)
 
-for x in range(len(var)):
-    passed += 1
+    for x in range(len(var)):
+        passed += 1
 
-    # colorprint(f"[{passed}~{clé[x]}]", color = Colors.green, end = False)
+        # colorprint(f"[{passed}~{clé[x]}]", color = Colors.green, end = False)
 
-    if int(passed) > int(clé[x]):
-        colorprint(var[x], color = Colors.red, end = False)
-        passed = 0
+        if int(passed) > int(clé[x]):
+            colorprint(var[x], color = Colors.red, end = False)
+            passed = 0
 
-    else:
-        sort += str(var[x])
-        colorprint(var[x], color = Colors.cyan, end = False)
+        else:
+            sort += str(var[x])
+            colorprint(var[x], color = Colors.cyan, end = False)
 
-var = sort
+    var = sort
 
-colorprint("\n                -> ", color = Colors.blanc,end = False)
-colorprint(var, color = Colors.cyan)
+    colorprint("\n                -> ", color = Colors.blanc,end = False)
+    colorprint(var, color = Colors.cyan)
 
-var = BtoN(var)
+    var = BtoN(var)
 
-colorprint("var = BtoN(var) -> ", color = Colors.blanc,end = False)
-colorprint(str(var), color = Colors.cyan)
+    colorprint("var = BtoN(var) -> ", color = Colors.blanc,end = False)
+    colorprint(str(var), color = Colors.cyan)
