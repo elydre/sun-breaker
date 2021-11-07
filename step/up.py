@@ -1,21 +1,45 @@
 from mod.sunbreaker import *
+from mod.ColorPrint import colorprint, Colors
 
-to_find = "0010010110001101"
+var = input("Texte: ")
 
-original = "22312221322"
+var = TtoB(var)
 
-clé = BtoC(to_find)
+old = var
 
-clé = "".join(str(int(c)+1) for c in clé)
+colorprint("var = TtoB(var) -> ", color = Colors.blanc,end = False)
+colorprint(var, color = Colors.cyan)
 
-print(clé)
-print(original)
+clé = BtoC(var)
 
-'''
+colorprint("clé = BtoC(var) -> ", color = Colors.blanc,end = False)
+colorprint(clé, color = Colors.cyan)
 
+sort = ""
+passed = 0
+while len(clé) < len(var): clé += clé
 
-11011 -> 212
-1111  -> 4
+colorprint("var = pert(var) -> ", color = Colors.blanc,end = False)
 
+for x in range(len(var)):
+    passed += 1
 
-'''
+    # colorprint(f"[{passed}~{clé[x]}]", color = Colors.green, end = False)
+
+    if int(passed) > int(clé[x]):
+        colorprint(var[x], color = Colors.red, end = False)
+        passed = 0
+
+    else:
+        sort += str(var[x])
+        colorprint(var[x], color = Colors.cyan, end = False)
+
+var = sort
+
+colorprint("\n                -> ", color = Colors.blanc,end = False)
+colorprint(var, color = Colors.cyan)
+
+var = BtoN(var)
+
+colorprint("var = BtoN(var) -> ", color = Colors.blanc,end = False)
+colorprint(str(var), color = Colors.cyan)
