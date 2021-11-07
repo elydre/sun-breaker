@@ -1,4 +1,4 @@
-from cytron import *
+from mod.cytron import *
 from sunbreaker import sunbreaker
 
 global sort, car, tp
@@ -23,7 +23,7 @@ def voc(b):
     global long
     long = b
     try:
-        if sort[b] == "coucou": pass
+        pass
     except:
         print(b,"depassé")
         sort.insert(0,"a")
@@ -46,8 +46,7 @@ def acr():
     
 while long <= max_long:
     acr()
-    test=""
-    for a in sort: test += a
+    test = "".join(sort)
     tp += str(sunbreaker(test)) + "\n" + str(test) + "\n"
     dp += 1
     if dp == 1000:
