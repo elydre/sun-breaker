@@ -1,7 +1,7 @@
 import mod.sunbreaker as sunbreaker
 from multiprocessing import Pool
 
-entree = 735733066992415932724787554601
+entree = 3236863121349874228862991691182665873761676
 lvl = 70
 
 #convertie un nombre en binaire
