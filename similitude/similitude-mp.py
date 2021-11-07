@@ -1,14 +1,12 @@
 import mod.sunbreaker as sunbreaker
 from multiprocessing import Pool
 
-entree = 3236863121349874228862991691182665873761676
+entree = 3013562719773290005728648248254793
 lvl = 70
 
 #convertie un nombre en binaire
 def bin_convert(n):
-    n = int(n)
-    if n == 0: return "0"
-    else: return bin_convert(n//2) + str(n%2)
+    return bin_convert(n//2) + str(n%2)
 
 entree = f"0{bin_convert(entree)}"
 
