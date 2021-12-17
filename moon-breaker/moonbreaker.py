@@ -13,7 +13,7 @@
 --|~|--|~|--|~|--|~|--|~|--|~|--
 '''
 
-version = "0.1"
+version = "0.2"
 
 def TtoB(text):
     return(''.join(format(ord(i), '08b') for i in text))
