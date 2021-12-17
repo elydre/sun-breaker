@@ -33,4 +33,4 @@ def moonbreaker(txt, key = 2):
     return MakeKey(TtoB(txt)+"1",key)
 
 if __name__ == "__main__":
-    while True: print(moonbreaker(input("Texte : ")))
+    while True: print(moonbreaker(input("Texte (str) : "), int(input("Key   (int) : "))))
