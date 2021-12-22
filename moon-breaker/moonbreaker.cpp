@@ -1,20 +1,12 @@
 #include <iostream>
 #include <cmath>
+#include <string>
 using namespace std;
 
 int TtoB(string text) {
     long int result = 0;
     for (long int i = 0; i < text.length(); i++) {
         result += (long int)text[i];
-    }
-    return result;
-}
-
-// convert binary to int
-int BtoI(string binary) {
-    long int result = 0;
-    for (long int i = 0; i < binary.length(); i++) {
-        result += (long int)binary[i] * pow(2, binary.length() - i - 1);
     }
     return result;
 }
@@ -32,7 +24,7 @@ int nb_caracters(long long int n) {
 long long int MakeKey (string bina, int key)
 {
     long long int basse = 1;
-    long int sup = BtoI(bina);
+    long int sup = stoi(bina, nullptr, 2);
     for (long int x = 2 ; x < sizeof(bina)*key + 20 ; x = x  + 1)
     {
         basse = basse * int(bina[x%(sizeof(bina))])+1;
@@ -41,6 +33,7 @@ long long int MakeKey (string bina, int key)
 
     while (true)
     {
+        cout << basse << " | " << sup << endl;
         if (sup > basse)
         {
             sup = sup / 2;
