@@ -5,21 +5,16 @@ def calcul(txt):
     return (txt, moonbreaker(txt))
 
 if __name__ == "__main__":
-    maxi = 10000000
-    # transformé un nombre en suite de lettres
-    def nombre_en_lettres(nombre):
-        # 1 -> a
-        # 2 -> b
-        # 26 -> z
-        # 27 -> aa
+    maxi = 100000000
 
+    def nombre_en_lettres(nombre):
         sortie = ""
-        lettres = "abcdefghijklmnopqrstuvwxyz"
+        lettres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
         while nombre > 0:
-            reste = nombre % 26
+            reste = nombre % len(lettres)
             sortie += lettres[reste]
-            nombre = (nombre - reste) // 26
+            nombre = (nombre - reste) // len(lettres)
 
         return sortie[::-1]
 
