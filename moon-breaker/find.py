@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     def nombre_en_lettres(nombre):
         sortie = ""
-        lettres = "0123456789"
+        lettres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
         while nombre > 0:
             reste = nombre % len(lettres)
