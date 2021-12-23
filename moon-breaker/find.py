@@ -24,7 +24,7 @@ def calcul(txt):
 
 if __name__ == "__main__":
     # nombre de strings à generer et tester
-    maxi = 100000000
+    maxi = 50000000
 
     def nombre_en_lettres(nombre):
         sortie = ""
