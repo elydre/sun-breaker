@@ -13,7 +13,7 @@
 --|~|--|~|--|~|--|~|--|~|--|~|--
 '''
 
-version = "0.3"
+version = "0.3b"
 
 def BtoI(bina):
     return int(bina,2)
@@ -42,8 +42,8 @@ def MakeKey(bina,key):
         elif len(str(basse)) < 10: basse *= 10
         else: break
     
-    return basse
-        
+    return int(basse)
+
 
 def moonbreaker(txt, key = 2):
     return MakeKey(TtoB(txt)+"1",key)
