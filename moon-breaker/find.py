@@ -14,18 +14,21 @@
 --|~|--|~|--|~|--|~|--|~|--|~|--
 '''
 
+# placez mooonbreaker.py dans meme dossier que find.py
 from moonbreaker import moonbreaker
 from multiprocessing import Pool
+from os import cpu_count
 
 def calcul(txt):
     return (txt, moonbreaker(txt))
 
 if __name__ == "__main__":
+    # nombre de strings à generer et tester
     maxi = 100000000
 
     def nombre_en_lettres(nombre):
         sortie = ""
-        lettres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        lettres = "0123456789"
 
         while nombre > 0:
             reste = nombre % len(lettres)
@@ -40,9 +43,11 @@ if __name__ == "__main__":
     
     print("test en pool")
 
-    with Pool(processes=48) as pool:
+    # nombre de processus (cpu_count() pour le meme nombre que de coeurs)
+    with Pool(processes=cpu_count()) as pool:
         result = pool.map(calcul, totest)
 
+    # plus gros break possible
     mini = 10**11
 
     for txt, key in result:
