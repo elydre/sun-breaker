@@ -27,10 +27,12 @@ if __name__ == "__main__":
     while True:
         i += 1
 
-        print(f"calcul de la serrie n°{i}, de '{nombre_en_lettres(cps*(i-1))}' à '{nombre_en_lettres(i * cps)}'")
+        print(f"calcul de la serrie n°{i}, de '{nombre_en_lettres(cps*(i-1))}' à '{nombre_en_lettres(i * cps)}'...")
 
         with Pool(cpu_count()) as pool:
             result = pool.map(calcul, list(range(cps*(i-1), i * cps)))
+
+        print("recuperation des resultats...")
 
         for string, longeur in result:
             if longeur < 10:
