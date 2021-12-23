@@ -17,7 +17,7 @@ while True:
     string = nombre_en_lettres(acc)
     str_break = moonbreaker(string)
     if len(str(str_break)) < 10:
-        wallet = round(wallet + 2 ** (10 - len(str(str_break))) / 10000, 4)
+        wallet = round(wallet + 10 ** (10 - len(str(str_break))) / 1000000, 4)
         print(f"Wallet : {wallet} MoonCoins  |   {string} => {str_break} ({len(str(str_break))})")
 
     acc += 1
