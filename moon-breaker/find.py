@@ -1,3 +1,19 @@
+'''
+--|~|--|~|--|~|--|~|--|~|--|~|--
+
+██  ████        ██████        ██
+████    ██     ██           ████
+██      ██   ████████     ██  ██
+████████       ██       ██    ██
+██             ██       █████████
+██             ██             ██
+██
+ - codé en : UTF-8
+ - langage : python 3
+ - GitHub  : github.com/pf4-DEV
+--|~|--|~|--|~|--|~|--|~|--|~|--
+'''
+
 from moonbreaker import moonbreaker
 from multiprocessing import Pool
 
