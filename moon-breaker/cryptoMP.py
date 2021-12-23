@@ -34,4 +34,4 @@ if __name__ == "__main__":
         for string, longeur in result:
             if longeur < 10:
                 wallet = round(wallet + 10 ** (10 - longeur) / 1000000, 4)
-                print(f"Wallet : {wallet} MoonCoins  |   {string} => {longeur}")
+        print(f"Wallet : {wallet} MoonCoins")
