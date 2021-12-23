@@ -8,7 +8,7 @@ def calcul(string):
 
 if __name__ == "__main__":
     # longueur d'une serie de calculs
-    cps = 1000000
+    cps = 100000 * cpu_count()
     wallet = 0
 
     def nombre_en_lettres(nombre):
