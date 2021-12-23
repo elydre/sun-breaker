@@ -20,8 +20,8 @@ def calcul(x):
 
 if __name__ == "__main__":
     # longueur d'une serie de calculs
-    utilisable = int(input("resourse utilisable /100: "))
-    nb_core = cpu_count() // utilisable + 1
+    nb_core = int(cpu_count() * (int(input("resourse utilisable /100: ")) / 100) + 1)
+    print("soit", nb_core, "coueur(s)")
     cps = 100000 * nb_core
     wallet = 0
 
