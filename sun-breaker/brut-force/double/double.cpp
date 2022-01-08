@@ -9,7 +9,7 @@ int main()
 {
     int jam = 0;
     string myints[] = {};
-    std::list<string> todo (myints, myints + sizeof(myints) / sizeof(string));
+    list<string> todo (myints, myints + sizeof(myints) / sizeof(string));
     ifstream fichier("s.txt");
     if(fichier)
     {
@@ -27,10 +27,10 @@ int main()
         cout << "ERREUR: Impossible d'ouvrir le fichier en lecture." << endl;
     }
 
-    for (std::list<string>::iterator a = todo.begin(); a != todo.end(); a++)
+    for (list<string>::iterator a = todo.begin(); a != todo.end(); a++)
     {
         jam = 0;
-        for (std::list<string>::iterator b = todo.begin(); b != todo.end(); b++)
+        for (list<string>::iterator b = todo.begin(); b != todo.end(); b++)
         {
             if (*a == *b)
             {
@@ -39,7 +39,7 @@ int main()
         }
         if (jam > 1)
         {
-            std::cout << jam << " - " << *a << std::endl;
+            cout << jam << " - " << *a << endl;
         }
     }
 
