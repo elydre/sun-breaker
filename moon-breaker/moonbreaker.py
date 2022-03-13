@@ -17,7 +17,7 @@
 version = "0.5"
 
 BtoI = lambda bina: int(bina, 2)
-TtoB = lambda text: ''.join(format(ord(i), '08b') for i in text)
+TtoB = lambda text: "".join(format(ord(i), '08b') for i in text)
 
 def MakeKey(bina,key):
     basse = 1
