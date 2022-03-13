@@ -8,8 +8,10 @@
 ██             ██       █████████
 ██             ██             ██
 ██
-.codé en : UTF-8
-.langage : python 3
+ - codé en : UTF-8
+ - langage : python 3
+ - GitHub  : github.com/pf4-DEV
+ - Licence : GNU GPL v3
 --|~|--|~|--|~|--|~|--|~|--|~|--
 '''
 
