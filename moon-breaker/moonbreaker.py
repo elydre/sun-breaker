@@ -28,12 +28,9 @@ def MakeKey(bina,key):
         basse *= int(bina[x%(len(bina))])+1
 
     while True:
-        if sup > basse:
-            sup /= 2
-        elif sup*10 < basse:
-            sup *= 2
-        else:
-            break
+        if sup > basse: sup /= 2
+        elif sup*10 < basse: sup *= 2
+        else: break
     
     basse -= sup
     
