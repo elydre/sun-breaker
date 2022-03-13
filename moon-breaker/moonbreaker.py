@@ -46,7 +46,7 @@ def MakeKey(bina,key):
 
 
 def moonbreaker(txt, key = 2):
-    return MakeKey(TtoB(txt)+"1",key)
+    return MakeKey(f'{TtoB(txt)}1', key)
 
 if __name__ == "__main__":
     while True: print(moonbreaker(input("Texte (str) : "), int(input("Key   (int) : "))))
