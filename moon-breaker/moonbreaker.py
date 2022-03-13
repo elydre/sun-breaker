@@ -13,7 +13,7 @@
 --|~|--|~|--|~|--|~|--|~|--|~|--
 '''
 
-version = "0.3b"
+version = "0.5"
 
 def BtoI(bina):
     return int(bina, 2)
