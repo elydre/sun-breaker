@@ -10,7 +10,7 @@
 ██
  - langage : python 3
  - GitHub  : github.com/pf4-DEV
- - Licence : GNU GPL v3
+ - Licence : GPL-3.0
 --|~|--|~|--|~|--|~|--|~|--|~|--
 '''
 
