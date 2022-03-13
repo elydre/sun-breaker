@@ -25,7 +25,7 @@ def MakeKey(bina,key):
     basse = 1
     sup = BtoI(bina)
     for x in range(2,len(bina)*key + 20):
-        basse *= int(bina[x%(len(bina))])+1
+        basse *= int(bina[x % (len(bina))]) + 1
 
     while True:
         if sup > basse: sup /= 2
