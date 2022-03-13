@@ -16,7 +16,7 @@
 version = "0.3b"
 
 def BtoI(bina):
-    return int(bina,2)
+    return int(bina, 2)
 
 def TtoB(text):
     return(''.join(format(ord(i), '08b') for i in text))
@@ -24,12 +24,12 @@ def TtoB(text):
 def MakeKey(bina,key):
     basse = 1
     sup = BtoI(bina)
-    for x in range(2,len(bina) * key + 20):
+    for x in range(2, len(bina) * key + 20):
         basse *= int(bina[x % (len(bina))]) + 1
 
     while True:
         if sup > basse: sup /= 2
-        elif sup*10 < basse: sup *= 2
+        elif sup * 10 < basse: sup *= 2
         else: break
     
     basse -= sup
@@ -46,4 +46,4 @@ def moonbreaker(txt, key = 2):
     return MakeKey(f'{TtoB(txt)}1', key)
 
 if __name__ == "__main__":
-    while True: print(moonbreaker(input("Texte (str) : "), int(input("Key   (int) : "))))
+    print(moonbreaker(input("Texte (str) : "), int(input("Key   (int) : "))))
