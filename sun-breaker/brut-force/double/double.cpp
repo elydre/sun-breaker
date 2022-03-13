@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     int jam = 0;
-    string myints[] = {};
+    string myints[1] = {};
     list<string> todo (myints, myints + sizeof(myints) / sizeof(string));
     ifstream fichier("s.txt");
     if(fichier)
