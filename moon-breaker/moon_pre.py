@@ -28,9 +28,7 @@ def MakeKey(bina,key):
         if sup > base: sup /= 2
         elif sup * 10 < base: sup *= 2
         else: break
-
-    print(sup, type(sup))
-
+        
     base = str(base - sup)[:10]
     base = base + "0"*(10-len(base))
 
