@@ -32,7 +32,7 @@ def MakeKey(bina,key):
     base = str(base - sup)[0:10]
     base = base + "0"*(10-len(base))
     
-    return int(float(base))
+    return int(base, 10)
 
 def moonbreaker(txt, key = 2):
     return MakeKey(f"{TtoB(txt)}1", key)
