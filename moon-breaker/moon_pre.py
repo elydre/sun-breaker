@@ -1,5 +1,6 @@
 '''
 --|~|--|~|--|~|--|~|--|~|--|~|--
+
 ██  ████        ██████        ██
 ████    ██     ██           ████
 ██      ██   ████████     ██  ██
@@ -12,35 +13,34 @@
  - Licence : GPL-3.0
 --|~|--|~|--|~|--|~|--|~|--|~|--
 '''
+import time
+version = "0.8pre"
 
-version = "0.5"
-
-BtoI = lambda bina: int(bina, 2)
 TtoB = lambda text: "".join(format(ord(i), "08b") for i in text)
 
 def MakeKey(bina,key):
-    basse = 1
-    sup = BtoI(bina)
+    base = 1
+    sup = int(bina, 2)
     for x in range(2, len(bina) * key + 20):
-        basse *= int(bina[x % (len(bina))]) + 1
+        base *= int(bina[x % (len(bina))]) + 1
 
     while True:
-        if sup > basse: sup /= 2
-        elif sup * 10 < basse: sup *= 2
+        if sup > base: sup /= 2
+        elif sup * 10 < base: sup *= 2
         else: break
-    
-    basse -= sup
-    
-    while True:
-        if len(str(basse)) > 10: basse //= 10
-        elif len(str(basse)) < 10: basse *= 10
-        else: break
-    
-    return int(basse)
 
+    print(sup, type(sup))
+
+    base = str(base - sup)[:10]
+    base = base + "0"*(10-len(base))
+
+    return int(float(base))
 
 def moonbreaker(txt, key = 2):
     return MakeKey(f"{TtoB(txt)}1", key)
 
 if __name__ == "__main__":
-    print(moonbreaker(input("Texte (str) : "), int(input("Key   (int) : "))))
+    print("start")
+    t = time.time()
+    print(moonbreaker("Hello World!"*3, 100))
+    print(f"end in {time.time() - t}s")
