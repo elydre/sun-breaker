@@ -28,11 +28,13 @@ def MakeKey(bina,key):
         if sup > base: sup /= 2
         elif sup * 10 < base: sup *= 2
         else: break
+
+    print(sup, type(sup))
     
     base = str(base - sup)[0:10]
     base = base + "0"*(10-len(base))
     
-    return int(base, 10)
+    return int(float(base))
 
 def moonbreaker(txt, key = 2):
     return MakeKey(f"{TtoB(txt)}1", key)
@@ -40,5 +42,5 @@ def moonbreaker(txt, key = 2):
 if __name__ == "__main__":
     print("start")
     t = time.time()
-    print(moonbreaker("Hello World!", 200))
+    print(moonbreaker("Hello World!"*3, 100))
     print(f"end in {time.time() - t}s")
