@@ -38,6 +38,4 @@ def moonbreaker(txt, key = 2):
     return MakeKey(f"{TtoB(txt)}1", key)
 
 if __name__ == "__main__":
-    t = time.time()
-    print(moonbreaker("Hello World!"*3, 100))
-    print(f"end in {time.time() - t}s")
+    print(moonbreaker(input("Texte (str) : "), int(input("Key   (int) : "))))
