@@ -37,7 +37,7 @@ while True:
 
         # colorprint(f"[{passed}~{clé[x]}]", color = Colors.green, end = False)
 
-        if int(passed) > int(clé[x]):
+        if passed > int(clé[x]):
             colorprint(var[x], color = Colors.red, end = False)
             passed = 0
 

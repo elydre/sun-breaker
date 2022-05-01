@@ -1,17 +1,16 @@
-'''
---|~|--|~|--|~|--|~|--|~|--|~|--
+'''    _             _
+  ___ | | _   _   __| | _ __   ___
+ / _ \| || | | | / _` || '__| / _ |
+|  __/| || |_| || (_| || |   |  __/
+ \___||_| \__, | \__,_||_|    \___|
+          |___/
+___________________________________
 
-██  ████        ██████        ██
-████    ██     ██           ████
-██      ██   ████████     ██  ██
-████████       ██       ██    ██
-██             ██       █████████
-██             ██             ██
-██
-.codé en : UTF-8
-.langage : python 3
-.version : v1.3
---|~|--|~|--|~|--|~|--|~|--|~|--
+ - codé en : UTF-8
+ - langage : python3
+ - GitHub  : github.com/elydre
+ - Licence : GNU GPL v3
+ - version : 1.3
 '''
 
 def pert(bina,ref):
@@ -22,7 +21,7 @@ def pert(bina,ref):
     while len(ref) < len(bina): ref += ref
     for x in range(len(bina)):
         passed += 1
-        if int(passed) > int(ref[x]): passed = 0
+        if passed > int(ref[x]): passed = 0
         else: sort += str(bina[x])
     return(sort)
 
