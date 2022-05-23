@@ -17,7 +17,7 @@ if __name__ == "__main__":
     for sri in range(2, 500):
         s = ["".join(choice("abcdefghijklmnopqrstuvwxyz") for _ in range(10)) for _ in range(3000)]
         s = [[e, sri] for e in s]
-        with Pool(processes=4) as pool:
+        with Pool(processes=16) as pool:
             res = pool.map(check_loop, s)
         print(f"---- {sri} ----")
         for i in res:
