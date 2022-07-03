@@ -46,7 +46,7 @@ Mais si plutôt que de devoirs généré toute les combinaison et de les crypté
 
 ## <b> Doublon </b>
 
-Le problème de crypté avec perte c’est que certaine des chaînes de caractère peuvent avoir le même break. En effet, 177339536549 et le break de:
+Le problème de crypté avec perte c’est que certaine des chaînes de caractères peuvent avoir le même break. En effet, 177339536549 et le break de:
 ```
  2f
  0<f
